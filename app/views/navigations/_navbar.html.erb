@@ -1,0 +1,7 @@
+<div class="d-flex p-fixed">
+  <% if @welcome %>
+    <%= render partial: 'navigations/welcome_nav_content' %>
+  <% else %>
+    <%= render partial: 'navigations/regular_nav_content' %>
+  <% end %>
+</div>
