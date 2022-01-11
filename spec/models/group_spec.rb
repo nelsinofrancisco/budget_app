@@ -26,9 +26,6 @@ RSpec.describe Group, type: :model do
         subject.save 
         expect(subject).to_not be_valid
       end
-      it 'if user_id is blank' do
-        expect { subject.save }.to raise_error ActiveRecord::NotNullViolation
-      end
       it 'if group icon is blank' do
         subject.user_id = @user.id
         subject.icon = '  '
