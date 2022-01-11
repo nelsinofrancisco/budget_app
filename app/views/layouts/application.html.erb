@@ -11,7 +11,10 @@
   </head>
 
   <body>
-    <div id='modal'></div>
-    <%= yield %>
+    <div class="p-relative">
+      <div id='modal'></div>
+      <%= render partial:'navigations/navbar' %>
+      <%= yield %>
+    </div>
   </body>
 </html>
