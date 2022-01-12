@@ -4,7 +4,7 @@ class WelcomeController < ApplicationController
     navbar_options
   end
 
-  protected 
+  protected
 
   def navbar_options
     @links = {
@@ -12,7 +12,7 @@ class WelcomeController < ApplicationController
         name: 'Log in',
         path: new_user_session_path
       },
-      sign_up:  {
+      sign_up: {
         name: 'Sign up',
         path: new_user_registration_path
       }
