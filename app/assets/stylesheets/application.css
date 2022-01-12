@@ -13,3 +13,151 @@
  *= require_tree .
  *= require_self
  */
+
+/* Default Style */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+
+:root {
+  --bc-color-1: #f5f4f4;
+  --bc-color-2: #2E69BA;
+  --bc-color-3: #60B524;
+  --bc-color-4: #fff;
+  --fc-color-1: #7a7a7a;
+  --fc-color-2: #fff;
+  --fc-color-3: #464646;
+  --bor-color-1: #edfaef;
+  --bor-color-1: #cadbe4;
+}
+
+body {
+  background-color: var(--bc-color-1);
+  height: 100vh;
+}
+/* Flex Box Styles */
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+/* Font Styles */
+.logo-style {
+  font-size: 24px;
+}
+
+.fc-color-1 {
+  color: var(--fc-color-1);
+}
+
+.fc-color-2 {
+  color: var(--fc-color-2);
+}
+
+.fc-color-3 {
+  color: var(--fc-color-3);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/* Width */
+
+.w-100 {
+  width: 100%;
+}
+
+/* Padding */
+
+.p-w-1 {
+  padding: 0 1rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+/* Margin */
+
+.mr-1 {
+  margin-right: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+/* Borders */
+
+.bor-1 {
+  border: 1px solid var(--bor-color-1);
+}
+
+.bor-2 {
+  border: 1px solid var(--bor-color-2);
+}
+
+/* Nav Bar */
+
+.nav-bar-container {
+  background-color: var(--bc-color-2);
+}
+
+/* Links */ 
+
+.default-link {
+  text-decoration: none;
+}
+
+/* buttons */
+
+.default-btn {
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.btn-color-1 {
+  background-color: var(--bc-color-3);
+}
+
+.btn-color-2 {
+  background-color: var(--bc-color-4);
+}
