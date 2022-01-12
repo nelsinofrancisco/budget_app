@@ -1,3 +1,12 @@
-<% @links.each do |(key, val)| %>
-  <%= link_to val[:name], val[:path] %>
-<% end %>
+<div class="w-100 p-1 d-flex justify-between align-items-center">
+  <h1 class="logo-style fc-color-2">
+    SmartTrackApp
+  </h1>
+
+
+  <div>
+    <%= link_to root_path, remote: true, class: "fc-color-2 default-link" do %>
+      <i class="fas fa-bars"></i>
+    <% end %>
+  </div>
+</div>
