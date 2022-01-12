@@ -1,7 +1,6 @@
 class WelcomeController < ApplicationController
   def index
     @welcome = true
-    navbar_options
   end
 
   protected
