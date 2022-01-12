@@ -26,7 +26,7 @@
 
 :root {
   --bc-color-1: #f5f4f4;
-  --bc-color-2: #2e69ba;
+  --bc-color-2: #407fd8;
   --bc-color-3: #60b524;
   --bc-color-4: #fff;
   --fc-color-1: #7a7a7a;
@@ -39,6 +39,20 @@
 body {
   background-color: var(--bc-color-1);
   height: 100vh;
+}
+
+/* Positionament */
+
+.p-relative {
+  position: relative;
+}
+
+.p-fixed {
+  position: fixed;
+}
+
+.p-absolute {
+  position: absolute;
 }
 
 /* Flex Box Styles */
@@ -65,6 +79,14 @@ body {
 
 .align-items-center {
   align-items: center;
+}
+
+.align-items-end {
+  align-items: end;
+}
+
+.align-self-center {
+  align-self: center;
 }
 
 /* Font Styles */
@@ -98,6 +120,10 @@ body {
   width: 100%;
 }
 
+.w-80 {
+  width: 80%;
+}
+
 /* Padding */
 
 .p-w-1 {
@@ -109,6 +135,10 @@ body {
 }
 
 /* Margin */
+
+.mt-100p {
+  margin-top: 100px;
+}
 
 .mr-1 {
   margin-right: 1rem;
@@ -142,9 +172,21 @@ body {
   background-color: var(--bc-color-2);
 }
 
+.ham-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.nav-bar-exp {
+  height: 100vh;
+  background-color: var(--bc-color-2);
+  top: 0;
+}
+
 /* Links */
 
-.default-link {
+.default-link,
+.nav-link {
   text-decoration: none;
 }
 
