@@ -1,0 +1,12 @@
+<div class="nav-bar-exp d-flex flex-column align-items-end p-absolute p-1 w-100">
+  <div id='close-menu' class='close-menu mb-2 fc-color-2'>
+    <i class="fas fa-bars"></i>
+  </div>
+  <div class="nav-link-box d-flex w-80 align-self-center justify-center">
+    <% id = 1 %>
+    <% @links.each do |(key, val)| %>
+      <%= link_to val[:name], val[:path], class: "nav-link default-btn btn-color-#{id} bor-#{id} fc-color-#{id + 1} mr-1" %>
+      <% id += 1 %>
+    <% end %> 
+  </div>
+</div>

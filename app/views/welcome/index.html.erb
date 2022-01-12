@@ -1,0 +1,26 @@
+<div class="d-flex flex-column">
+  <div class="d-flex flex-column align-items-center p-1 mb-2">
+    <h1 class="fc-color-3 text-center mb-2 mt-100p">
+      Welcome to SmartTrackApp
+    </h1>
+    <p class="fc-color-1 mb-1 text-justify">
+      Our App is built using RubyOnRails, and we provide you a way to track your finances, 
+      by grouping your expenses you can manage better your month!  
+    </p>
+    <p class="fc-color-1 mb-1 text-justify">
+      To start using the app, please login or sign up below!
+    </p>
+    <div class="d-flex mb-1">
+      <%= link_to new_user_session_path, class: 'default-link mr-1' do %>
+        <button type="button" class="default-btn btn-color-1 bor-1 fc-color-2">Log in</button>
+      <% end %>
+      <%= link_to new_user_session_path, class: 'default-link' do %>
+        <button type="button" class="default-btn btn-color-2 bor-2 fc-color-3">Sign Up</button>
+      <% end %>
+    </div>
+
+    <p>
+      Made by: <a href="https://github.com/nelsinofrancisco" class="default-link">@nelsinofrancisco</a>
+    </p>
+  </div>
+</div>
