@@ -1,0 +1,5 @@
+<div>
+  <% @links.each do |(key, val)| %>
+    <%= link_to val[:name], val[:path] %>
+  <% end %>
+</div>
