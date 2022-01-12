@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :groups
+  
   post '/navbar/welcome', to: 'welcome#navbar'
   post '/navbar/logged', to: 'users#navbar'
   root to: 'welcome#index'
