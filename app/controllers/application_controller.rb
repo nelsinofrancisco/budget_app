@@ -13,4 +13,10 @@ class ApplicationController < ActionController::Base
   def logged_user
     @user = current_user
   end
+
+  def render_nav(boolean)
+    if boolean
+      @regular_nav = true 
+    end
+  end
 end

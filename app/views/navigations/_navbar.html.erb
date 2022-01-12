@@ -1,7 +1,7 @@
 <div class="nav-bar-container d-flex justify-between align-items-center p-fixed w-100">
   <% if @welcome %>
     <%= render partial: 'navigations/welcome_nav_content' %>
-  <% else %>
+  <% elsif @regular_n %>
     <%= render partial: 'navigations/regular_nav_content' %>
   <% end %>
 </div>

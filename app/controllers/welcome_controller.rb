@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-    @welcome = true
+    render_nav(true)
   end
 
   protected
@@ -16,5 +16,11 @@ class WelcomeController < ApplicationController
         path: new_user_registration_path
       }
     }
+  end
+
+  def render_nav(boolean)
+    if boolean
+      @welcome = boolean 
+    end
   end
 end
