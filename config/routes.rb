@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     authenticated :user do
-      root 'home#index', as: :authenticated_root
+      root 'groups#index', as: :authenticated_root
     end
   
     unauthenticated do
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   end
 
   resources :groups
-  
+
   post '/navbar/welcome', to: 'welcome#navbar'
   post '/navbar/logged', to: 'users#navbar'
   root to: 'welcome#index'
