@@ -26,20 +26,21 @@
 
 :root {
   --bc-color-1: #f5f4f4;
-  --bc-color-2: #2E69BA;
-  --bc-color-3: #60B524;
+  --bc-color-2: #2e69ba;
+  --bc-color-3: #60b524;
   --bc-color-4: #fff;
   --fc-color-1: #7a7a7a;
   --fc-color-2: #fff;
   --fc-color-3: #464646;
   --bor-color-1: #edfaef;
-  --bor-color-1: #cadbe4;
+  --bor-color-2: #cadbe4;
 }
 
 body {
   background-color: var(--bc-color-1);
   height: 100vh;
 }
+
 /* Flex Box Styles */
 
 .d-flex {
@@ -141,7 +142,7 @@ body {
   background-color: var(--bc-color-2);
 }
 
-/* Links */ 
+/* Links */
 
 .default-link {
   text-decoration: none;
