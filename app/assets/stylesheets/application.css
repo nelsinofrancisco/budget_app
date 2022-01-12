@@ -32,6 +32,7 @@
   --fc-color-1: #7a7a7a;
   --fc-color-2: #fff;
   --fc-color-3: #464646;
+  --fc-color-4: #2277f7;
   --bor-color-1: #edfaef;
   --bor-color-2: #cadbe4;
 }
@@ -106,6 +107,10 @@ body {
   color: var(--fc-color-3);
 }
 
+.fc-color-4 {
+  color: var(--fc-color-4);
+}
+
 .text-center {
   text-align: center;
 }
@@ -142,6 +147,10 @@ body {
 
 .mr-1 {
   margin-right: 1rem;
+}
+
+.mb-05 {
+  margin-bottom: 0.5rem;
 }
 
 .mb-1 {
@@ -202,5 +211,13 @@ body {
 }
 
 .btn-color-2 {
+  background-color: var(--bc-color-4);
+}
+
+/* inputs */
+
+.default-input {
+  outline: none;
+  border-radius: 3px;
   background-color: var(--bc-color-4);
 }
