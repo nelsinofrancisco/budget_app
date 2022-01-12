@@ -14,6 +14,6 @@ Rails.application.routes.draw do
   end
 
   post '/navbar/welcome', to: 'welcome#navbar'
-  post '/navbar/logged', to: 'user#navbar'
+  post '/navbar/logged', to: 'users#navbar'
   root to: 'welcome#index'
 end
