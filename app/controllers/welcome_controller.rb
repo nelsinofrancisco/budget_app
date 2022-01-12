@@ -19,8 +19,6 @@ class WelcomeController < ApplicationController
   end
 
   def render_nav(boolean)
-    if boolean
-      @welcome = boolean 
-    end
+    @welcome = boolean if boolean
   end
 end

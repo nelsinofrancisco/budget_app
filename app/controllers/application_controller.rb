@@ -15,8 +15,6 @@ class ApplicationController < ActionController::Base
   end
 
   def render_nav(boolean)
-    if boolean
-      @regular_nav = true 
-    end
+    @regular_nav = true if boolean
   end
 end
