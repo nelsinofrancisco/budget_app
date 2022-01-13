@@ -1,13 +1,7 @@
 <div class="w-100 p-1 d-flex justify-between align-items-center">
-  <div>
-    <% if @back_option %>
-      <%= link_to @path, class: "ham-btn fc-color-2", id: 'nav-menu' do %>
-        <i class="fas fa-arrow-left"></i>
-      <% end %>
-    <% else %>
-      <%= button_to '/navbar/logged', remote: true, class: "ham-btn fc-color-2", id: 'nav-menu' do %>
-        <i class="fas fa-bars"></i>
-      <% end %>
+  <div id="menu-action">
+    <%= button_to '/navbar/logged', remote: true, class: "ham-btn fc-color-2", id: 'nav-menu' do %>
+      <i class="fas fa-bars"></i>
     <% end %>
   </div>
   <% if @title %>

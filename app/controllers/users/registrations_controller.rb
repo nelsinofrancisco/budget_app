@@ -42,6 +42,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def navbar_options
+    @session = true
     @back_option = true
     @path = root_path
     @search = false

@@ -19,15 +19,14 @@ class ApplicationController < ActionController::Base
   end
 
   def navbar_options
-    @search = true
     @links = {
-      login: {
-        name: 'Log in',
+      categories: {
+        name: 'Categories',
         path: new_user_session_path
       },
-      sign_up: {
-        name: 'Sign up',
-        path: new_user_registration_path
+      logout: {
+        name: 'Log out',
+        path: destroy_user_session_path
       }
     }
   end

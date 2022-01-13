@@ -13,7 +13,7 @@
   <body>
     <div class="p-relative">
       <div id='modal'></div>
-      <%= render partial:'navigations/navbar' %>
+      <%= render partial:'navigations/navbar', locals: { back_option: @back_option, path: @path } %>
       <%= yield %>
     </div>
   </body>

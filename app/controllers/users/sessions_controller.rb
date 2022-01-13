@@ -20,6 +20,7 @@ class Users::SessionsController < Devise::SessionsController
   end
 
   def navbar_options
+    @session = true
     @back_option = true
     @path = root_path
     @search = false
