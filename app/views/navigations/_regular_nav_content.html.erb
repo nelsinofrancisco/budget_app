@@ -1,0 +1,36 @@
+<div class="w-100 p-1 d-flex justify-between align-items-center">
+  <div>
+    <% if @back_option %>
+      <%= link_to @path, class: "ham-btn fc-color-2", id: 'nav-menu' do %>
+        <i class="fas fa-arrow-left"></i>
+      <% end %>
+    <% else %>
+      <%= button_to '/navbar/logged', remote: true, class: "ham-btn fc-color-2", id: 'nav-menu' do %>
+        <i class="fas fa-bars"></i>
+      <% end %>
+    <% end %>
+  </div>
+  <% if @title %>
+    <h1 class="logo-style fc-color-2">
+      <%= @title %>
+    </h1>
+  <% else %>
+    <h1 class="logo-style fc-color-2">
+      SmartTrackApp
+    </h1>
+  <% end %>
+
+
+  <div>
+    <% if @search %>
+      <%= button_to '/navbar/logged_search', remote: true, class: "ham-btn fc-color-2", id: 'nav-menu' do %>
+        <i class="fas fa-search"></i>
+      <% end %>
+    <% else %>
+      <%= link_to @title_link, '', 
+                                  onclick: "document.querySelector('form').submit()",
+                                  class: 'default-link fc-color-2' %>
+    <% end %>
+  </div>
+ 
+</div>

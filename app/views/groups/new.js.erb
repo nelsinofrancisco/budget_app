@@ -1,0 +1,18 @@
+if (document.querySelector('#add-category')) {
+  document.querySelector('.page-container').remove()
+  document.querySelector('.p-relative')
+  .insertAdjacentHTML('beforeend', '<%= escape_javascript render template: 'groups/index' %>')
+} else {
+  document.querySelector('.page-container').innerHTML = ''
+
+  document.querySelector('.page-container')
+  .insertAdjacentHTML('beforeend', '<%= escape_javascript render partial: 'groups/add_category' %>')
+
+  document.querySelector('#move-back').addEventListener('click', () => {
+  document.querySelector('.page-container').remove()
+
+  document.querySelector('.p-relative')
+  .insertAdjacentHTML('beforeend', '<%= escape_javascript render template: 'groups/index' %>')
+  })
+}
+

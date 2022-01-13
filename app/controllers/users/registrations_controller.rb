@@ -1,8 +1,13 @@
 class Users::RegistrationsController < Devise::RegistrationsController
-  before_action :configure_sign_up_params, only: [:create]
+  before_action :configure_sign_up_params, only: [:create, :new]
   before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
+  def new
+    render_nav(true)
+    navbar_options
+    super
+  end
 
   # POST /resource
 
@@ -37,16 +42,16 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def navbar_options
-    @links = {
-      login: {
-        name: 'Log in',
-        path: new_user_session_path
-      },
-      sign_up: {
-        name: 'Sign up',
-        path: new_user_registration_path
-      }
-    }
+    @back_option = true
+    @path = root_path
+    @search = false
+    @log_in = true
+    @title_link = 'Next'
+    @title = 'REGISTER'
+  end
+
+  def render_nav(boolean)
+    @regular_nav = true if boolean
   end
   # The path used after sign up.
 

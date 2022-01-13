@@ -17,4 +17,18 @@ class ApplicationController < ActionController::Base
   def render_nav(boolean)
     @regular_nav = true if boolean
   end
+
+  def navbar_options
+    @search = true
+    @links = {
+      login: {
+        name: 'Log in',
+        path: new_user_session_path
+      },
+      sign_up: {
+        name: 'Sign up',
+        path: new_user_registration_path
+      }
+    }
+  end
 end

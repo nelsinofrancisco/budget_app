@@ -1,0 +1,32 @@
+<div class="d-flex flex-column align-items-center p-relative">
+      <div id="move-back" class="move-back-btn p-absolute">
+        <i class="fas fa-arrow-left fa-2x"></i>
+      </div>
+      
+      <h1 class="fc-color-3 text-center mb-2 mt-3">
+        Add a Category
+      </h1>
+
+      <p class="fc-color-1 mb-1 text-justify">
+        Create category:
+      </p>
+
+      <%= form_with url: groups_path, scope: Group, remote: true, id: 'add-category', class: 'd-flex flex-column w-80 align-items-center' do |f| %>
+        <%= f.hidden_field :user_id, value: @user.id %>
+
+        <div class="field mb-1">
+          <%= f.label :name %><br />
+          <%= f.text_field :name, autofocus: true, class: 'default-input' %>
+        </div>
+
+        <div class="field mb-1">
+          <%= f.label 'Icon Url' %><br />
+          <%= f.text_field :icon, autofocus: true, class: 'default-input' %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Save", class: 'default-btn btn-color-2 bor-2 fc-color-3 mb-1' %>
+        </div>
+      <% end %>
+  </div>
+</div>

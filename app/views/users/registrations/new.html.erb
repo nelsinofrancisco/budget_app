@@ -1,43 +1,24 @@
-<div class="d-flex flex-column">
-  <div class="d-flex flex-column align-items-center p-1 mb-2  ">
-      <h1 class="fc-color-3 text-center mb-2 mt-100p">
-        Registrate to SmartTrackApp
-      </h1>
-
-      <p class="fc-color-1 mb-1 text-justify">
-        Sign up:
-      </p>
-
-      <%= form_with url: registration_path(resource_name), scope: resource, class: 'd-flex flex-column w-80 align-items-center' do |f| %>
+<div class="d-flex flex-column pt-100p">
+  <div class="d-flex flex-column">
+      <%= form_with url: registration_path(resource_name), scope: resource, class: 'd-flex flex-column  background-color-1' do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
 
-        <div class="field mb-1">
-          <%= f.label :name %><br />
-          <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'default-input' %>
+        <div class="field input-border">
+          <%= f.text_field :name, autofocus: true, placeholder: 'Full name', autocomplete: "name", class: 'default-input w-100' %>
         </div>
 
-        <div class="field mb-1">
-          <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'default-input' %>
+        <div class="field input-border">
+          <%= f.email_field :email, autofocus: true, placeholder: 'Email', autocomplete: "email", class: 'default-input w-100' %>
         </div>
 
-        <div class="field mb-1">
-          <%= f.label :password %>
-          <% if @minimum_password_length %>
-          <% end %><br />
-          <%= f.password_field :password, autocomplete: "new-password", class: 'default-input' %>
+        <div class="field input-border">
+          <%= f.password_field :password, placeholder: 'Password', autocomplete: "new-password", class: 'default-input w-100' %>
         </div>
 
-        <div class="field mb-1">
-          <%= f.label :password_confirmation %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'default-input' %>
-        </div>
-
-        <div class="actions">
-          <%= f.submit "Sign up", class: 'default-btn btn-color-2 bor-2 fc-color-3 mb-1' %>
+        <div class="field">
+          <%= f.password_field :password_confirmation, placeholder: 'Password confirmation', autocomplete: "new-password", class: 'default-input w-100' %>
         </div>
       <% end %>
 
-      <%= link_to "Log in", new_user_session_path, class: 'default-link default-btn btn-color-1 bor-1 fc-color-2' %>
   </div>
 </div>
