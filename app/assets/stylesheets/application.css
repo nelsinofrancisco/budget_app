@@ -25,9 +25,9 @@
 /* Variables */
 
 :root {
-  --bc-color-1: #f5f4f4;
-  --bc-color-2: #407fd8;
-  --bc-color-3: #60b524;
+  --bc-color-1: #F5F6F8;
+  --bc-color-2: #3678C2;
+  --bc-color-3: #5fb523;
   --bc-color-4: #fff;
   --fc-color-1: #7a7a7a;
   --fc-color-2: #fff;
@@ -78,6 +78,10 @@ body {
   justify-content: space-between;
 }
 
+.justify-around {
+  justify-content: space-around;
+}
+
 .align-items-center {
   align-items: center;
 }
@@ -88,6 +92,10 @@ body {
 
 .align-self-center {
   align-self: center;
+}
+
+.justify-self-end {
+  justify-self: end;
 }
 
 /* Font Styles */
@@ -129,10 +137,28 @@ body {
   width: 80%;
 }
 
+/* Height */
+
+.vh-100 {
+  height: 100vh;
+}
+
+.h-100 {
+  height: 100%;
+}
+
 /* Padding */
+
+.pt-100p {
+  padding-top: 100px;
+}
 
 .p-w-1 {
   padding: 0 1rem;
+}
+
+.p-05 {
+  padding: 0.5rem;
 }
 
 .p-1 {
@@ -141,8 +167,20 @@ body {
 
 /* Margin */
 
-.mt-100p {
-  margin-top: 100px;
+.page-container {
+  padding: 100px 1rem 1rem 1rem;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
 }
 
 .mr-1 {
@@ -165,6 +203,10 @@ body {
   margin-bottom: 3rem;
 }
 
+.mt-50p {
+  margin-top: 50px;
+}
+
 /* Borders */
 
 .bor-1 {
@@ -172,7 +214,7 @@ body {
 }
 
 .bor-2 {
-  border: 1px solid var(--bor-color-2);
+  border: none;
 }
 
 /* Nav Bar */
@@ -207,11 +249,16 @@ body {
 }
 
 .btn-color-1 {
-  background-color: var(--bc-color-3);
+  background-color: var(--bc-color-2);
 }
 
 .btn-color-2 {
-  background-color: var(--bc-color-4);
+  background-color: var(--bc-color-1);
+}
+
+
+.btn-color-3 {
+  background-color: var(--bc-color-3);
 }
 
 /* inputs */
