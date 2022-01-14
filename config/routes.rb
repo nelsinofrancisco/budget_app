@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   end
 
   resources :groups
+  resources :user_transactions, only: [:create]
 
   post '/navbar/welcome', to: 'welcome#navbar'
   post '/navbar/logged', to: 'users#navbar'
