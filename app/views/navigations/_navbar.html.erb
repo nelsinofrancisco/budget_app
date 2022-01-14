@@ -1,5 +1,25 @@
-<div class="nav-bar-container d-flex justify-between align-items-center p-fixed w-100">
+<div class="nav-bar-container d-flex flex-column justify-between align-items-center p-fixed w-100">
   <% if @regular_nav %>
     <%= render partial: 'navigations/regular_nav_content' %>
+  <% end %>
+  <% if @transaction %>
+    <div class="d-flex justify-end w-100 p-05">
+      <div class="d-flex flex-column align-items-center mr-1">
+        <h2 class="fs-14 fc-2">
+          Most recent
+        </h2>
+        <span class="fs-14 fc-2">
+          •
+        </span>
+      </div>
+      <div class="d-flex flex-column align-items-center mr-1">
+        <h2 class="fs-14 fc-7">
+          Most Ancient
+        </h2>
+        <span class="fs-14 fc-2 d-hidden">
+          •
+        </span>
+      </div>
+    </div>
   <% end %>
 </div>
