@@ -7,11 +7,10 @@ module NavModule
     @transaction = false
   end
 
-  def index_group_navbar_options 
+  def index_group_navbar_options
     @title = 'Categories'
     navbar_options
   end
-
 
   def show_group_nav_options
     @back_option = true

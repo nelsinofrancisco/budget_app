@@ -31,9 +31,7 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new(group_params)
 
-    if @group.save 
-      redirect_to groups_path, format: 'js'
-    end
+    redirect_to groups_path, format: 'js' if @group.save
   end
 
   protected
