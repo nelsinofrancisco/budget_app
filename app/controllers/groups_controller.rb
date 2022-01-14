@@ -12,8 +12,10 @@ class GroupsController < ApplicationController
   end
 
   def show
-    @group = Group.where(params[:id])
-    @user_transactions = @group.transactions_groups.includes(:user_transaction).order(created_at: :desc)
+    render_nav(true)
+    show_nav_options
+    @group = Group.find_by_id(params[:id])
+    @user_transactions = @group.user_transactions
     respond_to do |format|
       format.html
       format.js { render 'groups/show.js.erb' }
@@ -35,6 +37,13 @@ class GroupsController < ApplicationController
     super
   end
 
+  def show_nav_options
+    @back_option = true
+    @path = root_path
+    @title = 'Transactions'
+    @search = true
+    @transaction = true
+  end
   def group_params
     params.require(:group).permit(:name, :icon, :user_id)
   end
