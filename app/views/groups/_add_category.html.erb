@@ -1,28 +1,20 @@
-<div class="d-flex flex-column align-items-center p-relative">
-      <h1 class="fc-3 text-center mb-2 mt-3">
-        Add a Category
-      </h1>
+<div class="page-container d-flex flex-column pt-100p">
+  <div class="d-flex flex-column">
+    <%= form_with url: groups_path, scope: Group, remote: true, id: 'add-category', class: 'd-flex flex-column background-color-1' do |f| %>
+      <%= f.hidden_field :user_id, value: @user.id %>
 
-      <p class="fc-1 mb-1 text-justify">
-        Create category:
-      </p>
+      <div class="field input-border">
+        <%= f.text_field :name, placeholder:'Group name' ,autofocus: true, class: 'default-input w-100' %>
+      </div>
 
-      <%= form_with url: groups_path, scope: Group, remote: true, id: 'add-category', class: 'd-flex flex-column w-80 align-items-center' do |f| %>
-        <%= f.hidden_field :user_id, value: @user.id %>
+      <div class="field">
+        <%= f.text_field :icon, placeholder: 'Image Url', autofocus: true, class: 'default-input w-100' %>
+      </div>
 
-        <div class="field mb-1">
-          <%= f.label :name %><br />
-          <%= f.text_field :name, autofocus: true, class: 'default-input' %>
-        </div>
-
-        <div class="field mb-1">
-          <%= f.label 'Icon Url' %><br />
-          <%= f.text_field :icon, autofocus: true, class: 'default-input' %>
-        </div>
-
-        <div class="actions">
-          <%= f.submit "Save", class: 'default-btn btn-color-2 bor-2 fc-3 mb-1' %>
-        </div>
-      <% end %>
+      <div class="actions">
+        <%= f.submit "Save", class: 'default-btn btn-color-2 bor-2 fc-3 mb-1' %>
+      </div>
+    <% end %>
+    </div>
   </div>
 </div>
