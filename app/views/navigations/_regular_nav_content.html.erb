@@ -1,7 +1,7 @@
 <div class="w-100 p-1 d-flex justify-between align-items-center">
   <div id="menu-action">
     <% if @back_option %>
-      <%= link_to :back, class: "ham-btn fc-2", id: 'nav-menu' do %>
+      <%= link_to @path, format: 'js', remote: true, class: "ham-btn fc-2", id: 'nav-menu' do %>
         <i class="fas fa-arrow-left"></i>
       <% end %>
     <% else %>
@@ -26,6 +26,10 @@
       <%= button_to '/navbar/logged_search', remote: true, class: "ham-btn fc-2", id: 'nav-menu' do %>
         <i class="fas fa-search"></i>
       <% end %>
+    <% elsif @new_transaction %>
+      <%= link_to 'Create', '',
+                                  onclick: "document.querySelector('form').submit()",
+                                  class: 'default-link fc-2' %>
     <% else %>
       <%= link_to @title_link, '', 
                                   onclick: "document.querySelector('form').submit()",

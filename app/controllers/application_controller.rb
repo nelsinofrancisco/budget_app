@@ -19,6 +19,7 @@ class ApplicationController < ActionController::Base
   end
 
   def navbar_options
+    @path = root_path
     @links = {
       categories: {
         name: 'Categories',
