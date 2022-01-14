@@ -1,3 +1,9 @@
 // Place all the styles related to the UserTransactions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.category-container {
+  background-color: var(--bc-color-4);
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 5px;
+}
