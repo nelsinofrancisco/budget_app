@@ -13,8 +13,8 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :groups
-  resources :user_transactions, only: [:create]
+  resources :groups, only: [:index, :show, :create]
+  resources :user_transactions, only: [:new, :create], path: '/transactions'
 
   post '/navbar/welcome', to: 'welcome#navbar'
   post '/navbar/logged', to: 'users#navbar'
