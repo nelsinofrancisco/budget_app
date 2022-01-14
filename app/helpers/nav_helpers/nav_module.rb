@@ -9,7 +9,17 @@ module NavModule
 
   def index_group_navbar_options
     @title = 'Categories'
-    navbar_options
+    @path = root_path
+    @links = {
+      categories: {
+        name: 'Categories',
+        path: new_user_session_path
+      },
+      logout: {
+        name: 'Log out',
+        path: destroy_user_session_path
+      }
+    }
   end
 
   def show_group_nav_options
@@ -18,5 +28,11 @@ module NavModule
     @title = 'Transactions'
     @search = true
     @transaction = true
+  end
+
+  def new_transaction_nav_options
+    @back_option = true
+    @path = group_path(params[:group_id])
+    @title = 'New Transaction'
   end
 end
