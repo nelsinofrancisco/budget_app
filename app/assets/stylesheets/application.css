@@ -46,6 +46,12 @@ body {
   height: 100vh;
 }
 
+/* Background */
+
+.bc-4 {
+  background-color: var(--bc-color-4);
+}
+
 /* Positionament */
 
 .p-relative {
