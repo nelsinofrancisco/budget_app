@@ -25,16 +25,16 @@
 /* Variables */
 
 :root {
-  --bc-color-1: #F5F6F8;
-  --bc-color-2: #3678C2;
+  --bc-color-1: #f5f6f8;
+  --bc-color-2: #3678c2;
   --bc-color-3: #5fb523;
   --bc-color-4: #fff;
-  --fc-1: #434C56;
+  --fc-1: #434c56;
   --fc-2: #fff;
-  --fc-3: #555E67;
+  --fc-3: #555e67;
   --fc-4: #2277f7;
-  --fc-5: #878A8F;
-  --fc-6: #989DA3;
+  --fc-5: #878a8f;
+  --fc-6: #989da3;
   --fc-7: #b5bfc5;
   --bor-color-1: #edfaef;
   --bor-color-2: #cadbe4;
@@ -146,7 +146,7 @@ body {
 }
 
 .fc-7 {
-  color: var(--fc-7)
+  color: var(--fc-7);
 }
 
 .text-center {
@@ -157,11 +157,12 @@ body {
   text-align: justify;
 }
 
-/* Background-color */ 
+/* Background-color */
 
 .background-color-1 {
   background-color: var(--bc-color-4);
 }
+
 /* Width */
 
 .w-100 {
@@ -296,7 +297,6 @@ body {
   background-color: var(--bc-color-1);
 }
 
-
 .btn-color-3 {
   background-color: var(--bc-color-3);
 }
@@ -319,7 +319,7 @@ body {
   position: relative;
 }
 
-.input-border:before {
+.input-border::before {
   content: "";
   position: absolute;
   left: 1rem;
@@ -335,9 +335,9 @@ body {
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px var(--bc-color-4) inset !important;
   -webkit-text-fill-color: var(--fc-1);
 }
