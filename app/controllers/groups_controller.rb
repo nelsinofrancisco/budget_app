@@ -25,6 +25,7 @@ class GroupsController < ApplicationController
     @groups = @user.groups
     respond_to do |format|
       format.js { render 'groups/js/new.js.erb' }
+      format.html
     end
   end
 
