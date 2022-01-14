@@ -1,0 +1,16 @@
+<% show_group_nav_options %>
+
+<div class="user-transaction-container d-flex flex-column">
+  <% if @user_transactions.empty? %>
+    <p>
+      You have not added any transaction for this group yet! Try adding one below.
+    </p>
+  <% else %>
+    <% @user_transactions.each do |transaction| %>
+      <%= render partial:'user_transactions/transaction_card', locals: { transaction: transaction } %>
+    <% end %>
+  <% end %>
+  <%= button_to new_user_transaction_path, params: { group_id: @group.id }, method: :get, class: "default-btn btn-color-1 bor-1 fc-2 mt-50p w-100", id: 'nav-menu' do %>
+    Add Transaction
+  <% end %>
+</div>

@@ -1,0 +1,40 @@
+<div class="w-100 p-1 d-flex justify-between align-items-center">
+  <div id="menu-action">
+    <% if @back_option %>
+      <%= link_to @path, format: 'js', remote: true, class: "ham-btn fc-2", id: 'nav-menu' do %>
+        <i class="fas fa-arrow-left"></i>
+      <% end %>
+    <% else %>
+      <%= button_to '/navbar/logged', remote: true, class: "ham-btn fc-2", id: 'nav-menu' do %>
+        <i class="fas fa-bars"></i>
+      <% end %>
+    <% end %>
+  </div>
+  <% if @title %>
+    <h1 class="logo-style fc-2">
+      <%= @title %>
+    </h1>
+  <% else %>
+    <h1 class="logo-style fc-2">
+      SmartTrackApp
+    </h1>
+  <% end %>
+
+
+  <div>
+    <% if @search %>
+      <%= button_to '/navbar/logged_search', remote: true, class: "ham-btn fc-2", id: 'nav-menu' do %>
+        <i class="fas fa-search"></i>
+      <% end %>
+    <% elsif @new_transaction %>
+      <%= link_to 'Create', '',
+                                  onclick: "document.querySelector('form').submit()",
+                                  class: 'default-link fc-2' %>
+    <% else %>
+      <%= link_to @title_link, '', 
+                                  onclick: "document.querySelector('form').submit()",
+                                  class: 'default-link fc-2' %>
+    <% end %>
+  </div>
+ 
+</div>

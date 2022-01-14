@@ -1,0 +1,14 @@
+<div class="page-container d-flex flex-column">
+  <% if @groups.empty? %>
+    <p>
+      You have not added any category yet! Try adding one below.
+    </p>
+  <% else %>
+    <% @groups.each do |group| %>
+      <%= render partial:'groups/group_card', locals: { group: group } %>
+    <% end %>
+  <% end %>
+  <%= button_to new_group_path, method: :get, remote: true, class: "default-btn btn-color-1 bor-1 fc-2 mt-50p w-100", id: 'nav-menu' do %>
+    Add Category
+  <% end %>
+</div>

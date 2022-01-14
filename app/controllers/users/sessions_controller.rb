@@ -3,6 +3,11 @@ class Users::SessionsController < Devise::SessionsController
   before_action :navbar_options
   # GET /resource/sign_in
 
+  def new
+    render_nav(true)
+    navbar_options
+    super
+  end
   # POST /resource/sign_in
 
   # DELETE /resource/sign_out
@@ -11,19 +16,20 @@ class Users::SessionsController < Devise::SessionsController
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_in_params
-    devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
+    devise_parameter_sanitizer.permit(:sign_in, keys: %i[name password_confirmation])
   end
 
   def navbar_options
-    @links = {
-      login: {
-        name: 'Log in',
-        path: new_user_session_path
-      },
-      sign_up: {
-        name: 'Sign up',
-        path: new_user_registration_path
-      }
-    }
+    @session = true
+    @back_option = true
+    @path = root_path
+    @search = false
+    @log_in = true
+    @title_link = 'Log In'
+    @title = 'LOGIN'
+  end
+
+  def render_nav(boolean)
+    @regular_nav = true if boolean
   end
 end

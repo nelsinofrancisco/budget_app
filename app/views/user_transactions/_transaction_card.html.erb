@@ -1,0 +1,16 @@
+<div class='category-container d-flex mt-1'>
+  <img class="group-icon mr-1" src='<%= @group.icon %>' alt='category-icon'/>
+  <div class='d-flex flex-column w-100'>
+      <div class='d-flex justify-between'>
+        <p class="fc-1">
+          <%= transaction.name %>
+        </p>
+        <p class="fc-1">
+          $ <%= transaction.amount %>
+        </p>
+      </div>
+      <p class="mt-auto mb-1 fc-1">
+        Created: <%= transaction.created_at.strftime('%d %b %Y') %>
+      </p>
+  </div>
+</div>

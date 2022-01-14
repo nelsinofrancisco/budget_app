@@ -17,4 +17,18 @@ class ApplicationController < ActionController::Base
   def render_nav(boolean)
     @regular_nav = true if boolean
   end
+
+  def navbar_options
+    @path = root_path
+    @links = {
+      categories: {
+        name: 'Categories',
+        path: new_user_session_path
+      },
+      logout: {
+        name: 'Log out',
+        path: destroy_user_session_path
+      }
+    }
+  end
 end
