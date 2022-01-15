@@ -12,8 +12,12 @@ window.addEventListener('ajax:success', () => {
     document.querySelector('.page-container').remove()
     document.querySelector('.p-relative')
       .insertAdjacentHTML('beforeend', '<%= escape_javascript render template: 'groups/index' %>')
-  } else {
+  } else if (document.querySelector('.user-transaction-container')) {
     document.querySelector('.user-transaction-container').remove()
+    document.querySelector('.p-relative')
+      .insertAdjacentHTML('beforeend', '<%= escape_javascript render template: 'groups/index' %>')
+  } else {
+    document.querySelector('.add-transaction-container').remove()
     document.querySelector('.p-relative')
       .insertAdjacentHTML('beforeend', '<%= escape_javascript render template: 'groups/index' %>')
   }

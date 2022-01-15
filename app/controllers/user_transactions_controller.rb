@@ -1,6 +1,8 @@
 class UserTransactionsController < ApplicationController
   def new
     render_nav(true)
+    @user_transaction = UserTransaction.new()
+    @transaction_group = TransactionGroup.new()
     respond_to do |format|
       format.js { render 'user_transactions/js/new.js.erb' }
       format.html
@@ -8,12 +10,21 @@ class UserTransactionsController < ApplicationController
   end
 
   def create
+    render_nav(true)
     @user_transaction = UserTransaction.new(transaction_params)
-    return unless @user_transaction.save
-
-    transaction_group = TransactionGroup
-      .create(transaction_group_params.merge(user_transaction_id: @user_transaction.id))
-    redirect_to group_path(transaction_group.group_id), format: 'js'
+    @transaction_group = TransactionGroup.new(transaction_group_params)
+    
+    if @user_transaction.save
+        @transaction_group.user_transaction_id = @user_transaction.id
+        @transaction_group.save
+        redirect_to group_path(@transaction_group.group_id), format: 'js'
+        return
+    else
+      respond_to do |format|
+        format.js { render 'user_transactions/js/new.js.erb' }
+        format.html
+      end
+    end
   end
 
   protected
