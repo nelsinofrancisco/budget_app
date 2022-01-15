@@ -26,13 +26,10 @@
       <%= button_to '/navbar/logged_search', remote: true, class: "ham-btn fc-2", id: 'nav-menu' do %>
         <i class="fas fa-search"></i>
       <% end %>
-    <% elsif @new_transaction %>
-      <%= link_to 'Create', '',
-                                  onclick: "document.querySelector('form').submit()",
-                                  class: 'default-link fc-2' %>
-    <% else %>
-      <%= link_to @title_link, '', 
-                                  onclick: "document.querySelector('form').submit()",
+    <% elsif @confirm %>
+      <%= link_to @confirm_title, @confirm_path,
+                                  remote: true,
+                                  onclick: "document.querySelector('form').submit((e) => e.preventDefault())",
                                   class: 'default-link fc-2' %>
     <% end %>
   </div>

@@ -8,8 +8,8 @@ window.addEventListener('ajax:success', () => {
   document.querySelector('#modal')
     .insertAdjacentHTML('afterend', '<%= escape_javascript render partial: 'navigations/navbar' %>')
   <%# Here I'm making sure that the correct templated is being rendered %>
-  document.querySelector('.page-container').innerHTML = ''
-  document.querySelector('.page-container')
+  document.querySelector('.page-container').remove()
+  document.querySelector('.p-relative')
     .insertAdjacentHTML('beforeend', '<%= escape_javascript render partial: 'groups/add_category' %>')
 })
 

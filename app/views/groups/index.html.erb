@@ -1,3 +1,5 @@
+<% index_group_navbar_options %>
+
 <div class="page-container d-flex flex-column">
   <% if @groups.empty? %>
     <p>
@@ -8,7 +10,9 @@
       <%= render partial:'groups/group_card', locals: { group: group } %>
     <% end %>
   <% end %>
-  <%= button_to new_group_path, method: :get, remote: true, class: "default-btn btn-color-1 bor-1 fc-2 mt-50p w-100", id: 'nav-menu' do %>
-    Add Category
-  <% end %>
+  <div class="p-1 btn-color-3 mt-50p w-100">
+    <%= button_to new_group_path, method: :get, remote: true, class: "default-btn-1 fc-2 w-100", id: 'nav-menu' do %>
+      Add Category
+    <% end %>
+  </div>
 </div>

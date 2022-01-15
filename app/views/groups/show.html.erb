@@ -10,7 +10,9 @@
       <%= render partial:'user_transactions/transaction_card', locals: { transaction: transaction } %>
     <% end %>
   <% end %>
-  <%= button_to new_user_transaction_path, params: { group_id: @group.id }, method: :get, class: "default-btn btn-color-1 bor-1 fc-2 mt-50p w-100", id: 'nav-menu' do %>
-    Add Transaction
-  <% end %>
+  <div class="p-1 btn-color-3 mt-50p w-100">
+    <%= button_to new_user_transaction_path, params: { group_id: @group.id }, method: :get, class: "default-btn-1 fc-2 w-100", id: 'nav-menu' do %>
+      Add Transaction
+    <% end %>
+  </div>
 </div>

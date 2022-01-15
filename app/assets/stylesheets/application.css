@@ -15,8 +15,9 @@
  */
 
 /* Default Style */
-
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -186,7 +187,7 @@ body {
 /* Padding */
 
 .pt-100p {
-  padding-top: 100px;
+  padding: 100px 0 0 0 !important;
 }
 
 .p-w-1 {
@@ -243,6 +244,10 @@ body {
   margin-top: 50px;
 }
 
+.ml-1 {
+  margin-left: 1rem;
+}
+
 /* Borders */
 
 .bor-1 {
@@ -289,6 +294,13 @@ body {
   border-radius: 5px;
 }
 
+.default-btn-1 {
+  padding: 1rem;
+  border-radius: 3px;
+  box-shadow: none;
+  border: 1px solid var(--bor-color-3);
+}
+
 .btn-color-1 {
   background-color: var(--bc-color-2);
 }
@@ -297,7 +309,8 @@ body {
   background-color: var(--bc-color-1);
 }
 
-.btn-color-3 {
+.btn-color-3,
+.default-btn-1 {
   background-color: var(--bc-color-3);
 }
 
