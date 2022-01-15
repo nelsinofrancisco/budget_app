@@ -12,7 +12,8 @@
  *
  *= require_tree .
  *= require_self
- *= require font-awesome
+ *= require font_awesome5_webfont
+ *= require font_awesome5
  */
 
 /* Default Style */
