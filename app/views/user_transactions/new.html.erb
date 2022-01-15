@@ -1,9 +1,10 @@
 <% new_transaction_nav_options %>
 <% if Group.where(user_id: @user.id).empty? %>
+  <% @path = root_path %>
   <div class="page-container d-flex flex-column vh-100">
     <div class="d-flex flex-column align-items-center justify-around h-100">
       <h1 class="fc-3 text-center">
-        SmartTrackApp
+        Error: You have not added any groups yet!
       </h1>
     </div>
   </div>

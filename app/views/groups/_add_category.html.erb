@@ -1,7 +1,7 @@
 <div class="page-container d-flex flex-column pt-100p">
   <div class="d-flex flex-column">
-    <%= form_with url: groups_path, scope: Group, remote: true, id: 'add-category', class: 'd-flex flex-column background-color-1' do |f| %>
-      <%= render partial: 'errors/form_errors', locals: { model: Group} %>
+    <%= render partial: 'errors/form_errors', locals: { model: @group} %>
+    <%= form_with url: groups_path, scope: @group, remote: true, id: 'add-category', class: 'd-flex flex-column background-color-1' do |f| %>
       <%= f.hidden_field :user_id, value: @user.id %>
 
       <div class="field input-border">
