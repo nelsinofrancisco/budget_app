@@ -33,13 +33,12 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new(group_params)
     render_nav(true)
-    respond_to do |format|
-      if @group.save 
-        format.js { render 'groups/js/show.js.erb' }
-        format.html
-      else
-        format.js { render 'groups/js/new.js.erb' }
-        format.html
+    if @group.save
+      redirect_to groups_path, format: 'js' 
+      return
+    else
+      respond_to do |format|
+          format.html
       end
     end
   end
