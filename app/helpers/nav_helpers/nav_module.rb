@@ -35,7 +35,11 @@ module NavModule
 
   def new_transaction_nav_options
     @back_option = true
-    @path = group_path(params[:group_id])
+    @path = if params[:group_id]
+              group_path(params[:group_id])
+            else
+              groups_path
+            end
     @title = 'New Transaction'
     @confirm = true
     @confirm_title = 'Save'
