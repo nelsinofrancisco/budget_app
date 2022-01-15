@@ -16,7 +16,7 @@ module NavModule
     @links = {
       categories: {
         name: 'Categories',
-        path: new_user_session_path
+        path: groups_path
       },
       logout: {
         name: 'Log out',
