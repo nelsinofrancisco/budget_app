@@ -9,11 +9,11 @@ class UserTransactionsController < ApplicationController
 
   def create
     @user_transaction = UserTransaction.new(transaction_params)
+    return unless @user_transaction.save
 
-    if @user_transaction.save
-      transaction_group = TransactionGroup.create(transaction_group_params.merge(user_transaction_id: @user_transaction.id))
-      redirect_to group_path(transaction_group.group_id), format: 'js' 
-    end
+    transaction_group = TransactionGroup
+      .create(transaction_group_params.merge(user_transaction_id: @user_transaction.id))
+    redirect_to group_path(transaction_group.group_id), format: 'js'
   end
 
   protected
