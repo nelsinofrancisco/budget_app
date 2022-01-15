@@ -23,7 +23,7 @@ class GroupsController < ApplicationController
   def new
     render_nav(true)
     @groups = @user.groups
-    @group = Group.new()
+    @group = Group.new
     respond_to do |format|
       format.js { render 'groups/js/new.js.erb' }
       format.html
@@ -34,11 +34,11 @@ class GroupsController < ApplicationController
     @group = Group.new(group_params)
     render_nav(true)
     if @group.save
-      redirect_to groups_path, format: 'js' 
-      return
+      redirect_to groups_path, format: 'js'
+      nil
     else
       respond_to do |format|
-          format.html
+        format.html
       end
     end
   end

@@ -3,8 +3,8 @@ class UserTransactionsController < ApplicationController
 
   def new
     render_nav(true)
-    @user_transaction = UserTransaction.new()
-    @transaction_group = TransactionGroup.new()
+    @user_transaction = UserTransaction.new
+    @transaction_group = TransactionGroup.new
     respond_to do |format|
       format.js { render 'user_transactions/js/new.js.erb' }
       format.html
@@ -15,12 +15,12 @@ class UserTransactionsController < ApplicationController
     render_nav(true)
     @user_transaction = UserTransaction.new(transaction_params)
     @transaction_group = TransactionGroup.new(transaction_group_params)
-    
+
     if @user_transaction.save
-        @transaction_group.user_transaction_id = @user_transaction.id
-        @transaction_group.save
-        redirect_to group_path(@transaction_group.group_id), format: 'js'
-        return
+      @transaction_group.user_transaction_id = @user_transaction.id
+      @transaction_group.save
+      redirect_to group_path(@transaction_group.group_id), format: 'js'
+      nil
     else
       respond_to do |format|
         format.js { render 'user_transactions/js/new.js.erb' }

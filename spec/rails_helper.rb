@@ -35,7 +35,7 @@ def login_user
     fill_in 'user_password', with: 'admin123'
   end
 
-  all('a', text: 'Log In')[0].click()
+  all('a', text: 'Log In')[0].click
 end
 
 # Requires supporting ruby files with custom matchers and macros, etc, in

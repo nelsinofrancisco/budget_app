@@ -1,4 +1,3 @@
-
 require 'rails_helper'
 
 RSpec.feature 'Categories page', type: :feature, js: true do
