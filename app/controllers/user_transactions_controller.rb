@@ -1,4 +1,6 @@
 class UserTransactionsController < ApplicationController
+  load_and_authorize_resource
+
   def new
     render_nav(true)
     @user_transaction = UserTransaction.new()
