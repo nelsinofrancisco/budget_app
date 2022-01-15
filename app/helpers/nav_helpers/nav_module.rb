@@ -5,6 +5,9 @@ module NavModule
     @title = 'Add a category'
     @search = false
     @transaction = false
+    @confirm = true
+    @confirm_title = 'Save'
+    @confirm_path = new_group_path
   end
 
   def index_group_navbar_options
@@ -34,5 +37,8 @@ module NavModule
     @back_option = true
     @path = group_path(params[:group_id])
     @title = 'New Transaction'
+    @confirm = true
+    @confirm_title = 'Save'
+    @confirm_path = new_user_transaction_path
   end
 end
