@@ -5,13 +5,16 @@
     <%= form_with url: user_transactions_path, scope: UserTransaction, remote: true, id: 'add-transaction', class: 'd-flex flex-column background-color-1' do |f| %>
         <%= f.hidden_field :author_id, value: @user.id %>
         <div class="field input-border">
+          <div class="select-label">
+            <%= f.label 'Choose a group: ', class: 'fc-5'%><br />
+          </div>
+          <%= f.collection_select :group_id, group_list[:groups], :id, :name, selected: group_list[:selected], class: 'default-input w-100 fc-5' %>
+        </div>
+        <div class="field input-border">
           <%= f.text_field :name, placeholder: 'Transaction info', autofocus: true, class: 'default-input w-100', value: '' %>
         </div>
         <div class="field">
           <%= f.number_field :amount, placeholder: 'Transaction value', autofocus: true, class: 'default-input w-100' %>
-        </div>
-        <div class="actions">
-          <%= f.submit "Save", class: 'default-btn btn-color-2 bor-2 fc-3 mb-1' %>
         </div>
       <% end %>
     </div>
