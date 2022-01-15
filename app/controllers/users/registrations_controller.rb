@@ -9,6 +9,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
     super
   end
 
+  def create
+    render_nav(true)
+    navbar_options
+    super
+  end
+
   # POST /resource
 
   # GET /resource/edit

@@ -11,6 +11,7 @@
   <div class="add-transaction-container d-flex flex-column pt-100p">
     <div class="d-flex flex-column">
       <%= form_with url: user_transactions_path, scope: UserTransaction, remote: true, id: 'add-transaction', class: 'd-flex flex-column background-color-1' do |f| %>
+          <%= render partial: 'errors/form_errors', locals: { model: UserTransaction} %>
           <%= f.hidden_field :author_id, value: @user.id %>
           <div class="field input-border">
             <div class="select-label">

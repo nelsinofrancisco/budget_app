@@ -1,7 +1,7 @@
 <div class="d-flex flex-column pt-100p">
   <div class="d-flex flex-column">
       <%= form_with url: registration_path(resource_name), scope: resource, class: 'd-flex flex-column  background-color-1' do |f| %>
-        <%= render "devise/shared/error_messages", resource: resource %>
+        <%= render partial: 'errors/form_errors', locals: { model: resource} %>
 
         <div class="field input-border">
           <%= f.text_field :name, autofocus: true, placeholder: 'Full name', autocomplete: "name", class: 'default-input w-100' %>
@@ -18,6 +18,7 @@
         <div class="field">
           <%= f.password_field :password_confirmation, placeholder: 'Password confirmation', autocomplete: "new-password", class: 'default-input w-100' %>
         </div>
+        <%= f.submit "Sign Up", class: "d-hidden submit-btn" %>
       <% end %>
 
   </div>

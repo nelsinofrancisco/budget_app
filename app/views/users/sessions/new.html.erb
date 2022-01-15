@@ -1,14 +1,19 @@
 <div class="pt-100p d-flex flex-column">
+  <%= render partial: 'errors/flash' %>
   <div class="d-flex flex-column">
-      <%= form_with url: session_path(resource_name), scope: resource, class: 'd-flex flex-column bor-3 mb-1 background-color-1' do |f| %>
-        <div class="field input-border">
+    <%= render "devise/shared/error_messages", resource: resource %>
+      <%= render partial: 'errors/form_errors', locals: { model: resource} %>
+      <%= form_with url: session_path(resource), scope: resource, class: 'd-flex flex-column bor-3 mb-1 background-color-1' do |f| %>
+        <div class="field">
           <%= f.email_field :email, autofocus: true, placeholder: 'Email', autocomplete: "email", class: 'default-input w-100' %>
         </div>
 
         <div class="field">
           <%= f.password_field :password, placeholder: 'Password', autocomplete: "current-password", class: 'default-input w-100' %>
         </div>
+        <%= f.submit "Log in", class: "d-hidden submit-btn" %>
       <% end %>
+
       <%= link_to "Forgot your password?", new_password_path(resource_name), class: 'default-link fc-5 text-center' %>
   </div>
 </div>

@@ -28,7 +28,7 @@
       <% end %>
     <% elsif @confirm_session %>
       <%= link_to @confirm_title, @confirm_path,
-                                  onclick: "document.querySelector('form').submit((e) => e.preventDefault())",
+                                  onclick: "document.querySelector('.submit-btn').click()",
                                   class: 'default-link fc-2' %>
     <% elsif @confirm %>
       <%= link_to @confirm_title, @confirm_path,
