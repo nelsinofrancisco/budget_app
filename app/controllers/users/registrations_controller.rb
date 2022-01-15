@@ -46,7 +46,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @back_option = true
     @path = root_path
     @search = false
-    @confirm = true
+    @confirm_session = true
     @confirm_title = 'Next'
     @confirm_path = new_user_registration_path
     @title = 'REGISTER'

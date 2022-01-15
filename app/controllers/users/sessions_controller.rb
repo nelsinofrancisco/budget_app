@@ -24,7 +24,7 @@ class Users::SessionsController < Devise::SessionsController
     @back_option = true
     @path = root_path
     @search = false
-    @confirm = true
+    @confirm_session = true
     @confirm_title = 'Log In'
     @confirm_path = new_user_session_path
     @title = 'LOGIN'
