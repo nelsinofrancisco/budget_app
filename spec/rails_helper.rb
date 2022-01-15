@@ -10,29 +10,32 @@ require 'rspec/rails'
 def login_user
   @user = User.create(
     name: 'John Smith',
-    email: 'correct@email.com',
-    password: 'correctpassword'
+    email: 'foo1@foo.com',
+    password: 'admin123'
   )
-  @category = Category.create(
-    author_id: @user.id,
+  @group = Group.create(
+    user_id: @user.id,
     name: 'Loan',
     icon: 'https://thumbs.dreamstime.com/b/groceries-icon-food-162460009.jpg'
   )
-  @activity = Activity.create(
+  @user_transaction = UserTransaction.create(
     name: 'pay Nelsino back',
     amount: 20,
     author_id: @user.id
   )
-  @activity_category = ActivityCategory.create(
-    created_at: Time.now,
-    updated_at: Time.now,
-    category_id: @category.id,
-    activity_id: @activity.id
+  @transaction_group = TransactionGroup.create(
+    user_transaction_id: @user_transaction.id,
+    group_id: @group.id
   )
+
   visit user_session_path
-  fill_in 'user_email', with: 'correct@email.com'
-  fill_in 'user_password', with: 'correctpassword'
-  click_button 'Log in'
+
+  within('form') do
+    fill_in 'user_email', with: 'foo1@foo.com'
+    fill_in 'user_password', with: 'admin123'
+  end
+
+  all('a', text: 'Log In')[0].click()
 end
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
