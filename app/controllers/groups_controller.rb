@@ -3,7 +3,7 @@ class GroupsController < ApplicationController
 
   def index
     render_nav(true)
-    @groups = @user.groups
+    @groups = Group.where(user_id: @user.id).includes(:user_transactions, transaction_groups: [:user_transaction])
     respond_to do |format|
       format.js { render 'groups/js/index.js.erb' }
       format.html
