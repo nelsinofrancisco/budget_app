@@ -1,0 +1,17 @@
+<div class="nav-bar-exp d-flex flex-column align-items-start p-absolute p-1 w-100">
+  <div class="close-menu mb-2 fc-2">
+    <i class="fas fa-bars"></i>
+  </div>
+  <h1 class="text-center mb-3 fc-2">
+    <%= @user.name.capitalize %>
+  </h1>
+  <div class="nav-link-box d-flex flex-column w-80 align-self-center justify-center">
+    <% @links.each do |(key, val)| %>
+      <% if val[:name] == 'Log out' %>
+        <%= link_to val[:name], val[:path], method: :delete, class: "nav-link input-border p-1 fc-2" %>
+      <% else %>
+        <%= link_to val[:name], val[:path], class: "nav-link input-border p-1 fc-2" %>
+      <% end %>
+    <% end %> 
+  </div>
+</div>

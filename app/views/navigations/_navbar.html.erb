@@ -1,0 +1,33 @@
+<div class="nav-bar-container d-flex flex-column justify-between align-items-center p-fixed w-100">
+  <% if @regular_nav %>
+    <%= render partial: 'navigations/regular_nav_content' %>
+  <% end %>
+  <% if @transaction %>
+    <div class="d-flex justify-end w-100 p-05">
+      <div class="d-flex flex-column align-items-center mr-1">
+        <h2 class="fs-14 fc-2">
+          Most recent
+        </h2>
+        <span class="fs-14 fc-2">
+          •
+        </span>
+      </div>
+      <div class="d-flex flex-column align-items-center mr-1">
+        <h2 class="fs-14 fc-7">
+          Most Ancient
+        </h2>
+        <span class="fs-14 fc-2 d-hidden">
+          •
+        </span>
+      </div>
+    </div>
+    <div class="d-flex bc-4 justify-between p-1 w-100">
+      <h2 class="fs-16 fc-6">
+        Total spent
+      </h2>
+      <h2 class="fs-16 fc-1">
+        $ <%= transactions_total %>
+      </h2>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,6 @@
+<% if @links %>
+  document.querySelector('.p-relative').insertAdjacentHTML('beforeend', '<%= escape_javascript render partial: 'navigations/links' %>')
+  document.querySelector('.close-menu').addEventListener('click', (e) => {
+    document.querySelector('.nav-bar-exp').remove()
+  })
+<% end %>

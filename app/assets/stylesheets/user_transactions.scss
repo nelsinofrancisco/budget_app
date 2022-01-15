@@ -1,0 +1,32 @@
+// Place all the styles related to the UserTransactions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+/* SELECT STYLES */
+
+select {
+  background-color: var(--bc-color-4);
+  border: none;
+  padding: 1rem;
+  margin: 0;
+  min-width: 100%;
+  max-width: 100%;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: inherit;
+  line-height: inherit;
+  color: var(--fc-5);
+  outline: none;
+}
+
+/* Transaction Container */
+
+.transaction-container {
+  background-color: var(--bc-color-4);
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 5px;
+}
+
+.select-label {
+  padding: 1rem 1rem 0.2rem 1rem;
+}

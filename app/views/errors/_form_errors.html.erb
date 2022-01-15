@@ -1,0 +1,13 @@
+<% if model.errors.any? %>
+  <div id="error_explanation" class="p-1">
+    <p class="fc-1">
+      <%= pluralize(model.errors.count, "error") %> prohibited this category from being saved:
+    </p>
+
+    <ul class="p-1 ml-1 fc-1">
+      <% model.errors.each do |error| %>
+        <li ><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

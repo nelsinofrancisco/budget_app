@@ -1,0 +1,358 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font_awesome5_webfont
+ *= require font_awesome5
+ */
+
+/* Default Style */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+
+:root {
+  --bc-color-1: #f5f6f8;
+  --bc-color-2: #3678c2;
+  --bc-color-3: #5fb523;
+  --bc-color-4: #fff;
+  --fc-1: #434c56;
+  --fc-2: #fff;
+  --fc-3: #555e67;
+  --fc-4: #2277f7;
+  --fc-5: #878a8f;
+  --fc-6: #989da3;
+  --fc-7: #b5bfc5;
+  --bor-color-1: #edfaef;
+  --bor-color-2: #cadbe4;
+  --bor-color-3: #ececec;
+}
+
+body {
+  background-color: var(--bc-color-1);
+  height: 100vh;
+}
+
+/* Background */
+
+.bc-4 {
+  background-color: var(--bc-color-4);
+}
+
+/* Positionament */
+
+.p-relative {
+  position: relative;
+}
+
+.p-fixed {
+  position: fixed;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+/* Flex Box Styles */
+
+.d-flex {
+  display: flex;
+}
+
+.d-hidden {
+  display: none;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: end;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
+/* Font Styles */
+.logo-style {
+  font-size: 24px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fc-1 {
+  color: var(--fc-1);
+}
+
+.fc-2 {
+  color: var(--fc-2);
+}
+
+.fc-3 {
+  color: var(--fc-3);
+}
+
+.fc-4 {
+  color: var(--fc-4);
+}
+
+.fc-5 {
+  color: var(--fc-5);
+}
+
+.fc-6 {
+  color: var(--fc-6);
+}
+
+.fc-7 {
+  color: var(--fc-7);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/* Background-color */
+
+.background-color-1 {
+  background-color: var(--bc-color-4);
+}
+
+/* Width */
+
+.w-100 {
+  width: 100%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+/* Height */
+
+.vh-100 {
+  height: 100vh;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+/* Padding */
+
+.pt-100p {
+  padding: 100px 0 0 0 !important;
+}
+
+.p-w-1 {
+  padding: 0 1rem;
+}
+
+.p-05 {
+  padding: 0.5rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+/* Margin */
+
+.page-container {
+  padding: 100px 1rem 1rem 1rem;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mr-1 {
+  margin-right: 1rem;
+}
+
+.mb-05 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.mt-50p {
+  margin-top: 50px;
+}
+
+.ml-1 {
+  margin-left: 1rem;
+}
+
+/* Borders */
+
+.bor-1 {
+  border: 1px solid var(--bor-color-1);
+}
+
+.bor-2 {
+  border: none;
+}
+
+.bor-3 {
+  border-bottom: 1px solid var(--bor-color-2);
+  border-top: 1px solid var(--bor-color-2);
+}
+
+/* Nav Bar */
+
+.nav-bar-container {
+  background-color: var(--bc-color-2);
+}
+
+.ham-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.nav-bar-exp {
+  height: 100vh;
+  background-color: var(--bc-color-2);
+  top: 0;
+}
+
+/* Links */
+
+.default-link,
+.nav-link {
+  text-decoration: none;
+}
+
+/* buttons */
+
+.default-btn {
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.default-btn-1 {
+  padding: 1rem;
+  border-radius: 3px;
+  box-shadow: none;
+  border: 1px solid var(--bor-color-3);
+}
+
+.btn-color-1 {
+  background-color: var(--bc-color-2);
+}
+
+.btn-color-2 {
+  background-color: var(--bc-color-1);
+}
+
+.btn-color-3,
+.default-btn-1 {
+  background-color: var(--bc-color-3);
+}
+
+/* inputs */
+
+.default-input,
+.default-input:focus,
+.default-input:hover,
+.default-input:active {
+  position: relative;
+  outline: none;
+  border-radius: 3px;
+  padding: 1rem;
+  border: none;
+  color: var(--fc-5);
+}
+
+.input-border {
+  position: relative;
+}
+
+.input-border::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  bottom: 0;
+  height: 0;
+  width: calc(100% - 2rem);
+  border-bottom: 1px solid var(--bor-color-3);
+  z-index: 1;
+}
+
+.default-input::placeholder {
+  color: var(--fc-5);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--bc-color-4) inset !important;
+  -webkit-text-fill-color: var(--fc-1);
+}

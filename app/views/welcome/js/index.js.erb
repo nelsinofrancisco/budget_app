@@ -1,0 +1,10 @@
+window.addEventListener('ajax:success', () => {
+  <%# Here I'm making sure that the browser updates the url %>
+  window.history.pushState("", "", '<%= j root_path %>')
+  <%# Here I'm refreshing the view for the nav bar %>
+  document.querySelector('.p-relative').innerHTML = ''
+  <%# Here I'm making sure that the correct templated is being rendered %>
+  
+  document.querySelector('.p-relative')
+    .insertAdjacentHTML('beforeend', '<%= escape_javascript render template: 'welcome/index' %>')
+})

@@ -1,0 +1,14 @@
+<% show_group_nav_options %>
+
+window.addEventListener('ajax:success', () => {
+  <%# Here I'm making sure that the browser updates the url %>
+  window.history.pushState("", "", '<%= j group_path(@group.id) %>')
+  <%# Here I'm refreshing the view for the nav bar %>
+  document.querySelector('.nav-bar-container').remove()
+  document.querySelector('#modal')
+    .insertAdjacentHTML('afterend', '<%= escape_javascript render partial: 'navigations/navbar' %>')
+  <%# Here I'm making sure that the correct templated is being rendered %>
+  document.querySelector('.add-transaction-container').remove()
+  document.querySelector('.p-relative')
+    .insertAdjacentHTML('beforeend', '<%= escape_javascript render template: 'groups/show' %>')
+})
