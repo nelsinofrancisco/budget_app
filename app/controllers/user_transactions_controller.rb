@@ -11,8 +11,8 @@ class UserTransactionsController < ApplicationController
     @user_transaction = UserTransaction.new(transaction_params)
 
     if @user_transaction.save
-      TransactionGroup.create(transaction_group_params.merge(user_transaction_id: @user_transaction.id))
-      redirect_to groups_path, format: 'js' 
+      transaction_group = TransactionGroup.create(transaction_group_params.merge(user_transaction_id: @user_transaction.id))
+      redirect_to group_path(transaction_group.group_id), format: 'js' 
     end
   end
 
